@@ -1,0 +1,21 @@
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  SHIPPED scripts/kconfig/zconf.tab.c
+  SHIPPED scripts/kconfig/zconf.lex.c
+  SHIPPED scripts/kconfig/zconf.hash.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+In file included from scripts/kconfig/zconf.tab.c:2503:0:
+scripts/kconfig/menu.c: In function ‘get_symbol_str’:
+scripts/kconfig/menu.c:567:18: warning: ‘jump’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+     jump->offset = r->len - 1;
+     ~~~~~~~~~~~~~^~~~~~~~~~~~
+scripts/kconfig/menu.c:528:19: note: ‘jump’ was declared here
+  struct jump_key *jump;
+                   ^~~~
+  HOSTLD  scripts/kconfig/conf
+arch/arm/mach-java/Kconfig:164:warning: choice value used outside its choice group
+arch/arm/mach-java/Kconfig:169:warning: choice value used outside its choice group
+arch/arm/mach-java/Kconfig:181:warning: choice value used outside its choice group
+#
+# configuration written to .config
+#
